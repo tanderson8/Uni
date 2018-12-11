@@ -1,0 +1,38 @@
+/**Class: CustomerTester
+* @author Your Name
+* @version 1.0
+* Course : ITEC 2150 Spring 2018
+*  
+*
+*
+* This class This class will test the Customer class
+*
+* Purpose: This class will test the Customer class
+*/
+
+
+	public class CustomerTester 
+	{
+		public static void main(String[] args)
+		{
+	  Customer[] customer = new Customer[5];
+
+	     customer[0] = new Customer("Jane", "Jones");
+
+	     customer[1] = new Customer("Daffy", "Duck");
+
+	     customer[2] = new Customer("James", "Jones");       
+
+	     customer[3] = new Customer("Dick", "Walter");       
+
+	     customer[4] = new Customer("Don", "Trump");
+
+	     
+	     System.out.println ("Customer");
+
+	     for (Customer c : customer)
+
+	         System.out.println (c);
+	}
+	}
+
