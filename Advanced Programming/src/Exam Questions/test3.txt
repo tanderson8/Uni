@@ -1,0 +1,63 @@
+3.
+
+public class MyRunnable implements Runnable {
+   
+  public void run() {
+    while(true) System.out.println("ITEC 3150 was fun!");
+  }
+
+}
+
+Thread t = new Thread(new MyRunnable());
+t.start();
+
+
+4.
+
+public boolean hasTriple(int [] nums) {
+   
+    for(int i = 0; i < nums.length - 2; i++) {
+       if( nums[i] == 1 && nums[i+1] == 2 && nums[i+2] == 3 ) return true;
+    }
+    return false;
+}
+
+
+5. 
+
+
+nums.replaceAll( e -> e / 2.0 );
+
+6. 
+
+
+nums.removeIf( e -> e % 2 == 0 );
+
+8.
+
+public String reverseWords(String str) {
+     String [] words = str.split(" ");
+     String line = "";
+     for(int i=words.length-1; i >= 0; i--) {
+         line = line + words[i] + " ";
+     }
+     return line.trim();
+}
+
+
+9.
+
+
+printPairs( new int[]{ 7,0,5}, 5);
+
+public void printPairs(int[] nums, int target) {
+   HashSet<Integer> set = new HashSet<Integer>();
+
+   for(int i=0; i < nums.length; i++ ) {
+     if( set.contains(target - nums[i]) )
+        System.out.println("Found pair! " + nums[i] + " " + (target - nums[i]) );      
+     set.add(nums[i]);
+   }
+}
+
+
