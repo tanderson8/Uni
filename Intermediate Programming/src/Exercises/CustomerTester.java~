@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+/**Class: CustomerTester
+* @author Your Name
+* @version 1.0
+* Course : ITEC 2150 Spring 2018
+*  
+*
+*
+* This class This class will test the Customer class
+*
+* Purpose: This class will test the Customer class
+*/
+
+ public class CustomerTester 
+ {
+  public static void main(String[] args)
+  {
+  
+
+    ArrayList<Customer> people = new ArrayList<Customer>();
+
+
+    Customer c1 = new Customer("Tom", "Jones");
+    people.add(c1);
+
+    Customer c2 = new Customer("Michael", "Thomas");
+    people.add(c2);
+
+    Customer c3 = new Customer("George", "Stanz");
+    people.add(c3);
+
+    Customer c4 = new Customer("Bill", "Rogers");
+    people.add(c4);
+
+    Customer c5 = new Customer("Rebecca", "Allen");
+    people.add(c5);
+
+
+
+    for(Customer list:people) {System.out.println(list);}
+
+
+
+    System.out.println("Sort Order");
+    Collections.sort(people, byLastName());    
+
+
+}
+
+private static Comparator<Customer> byLastName()
+ {
+return new Comparator<Customer>()
+{
+    @Override
+    public int compare(Customer x, Customer y)
+    {
+        return x.getLastName().compareTo(y.getLastName());
+    }
+    
+ };
+};        
+}
+
+public class Customer {
+
+    String firstName;
+    String lastName;
+ public String getLastName() {
+  // TODO Auto-generated method stub
+  return null;
+ }
+
+
+}
+

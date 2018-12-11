@@ -1,0 +1,70 @@
+
+
+/**Class: Customer
+* @author Ta'im Anderson
+* @version 1.0
+* Course : ITEC 2150 Spring 2018
+* 
+*
+*
+* This class describes a Customer
+*
+* Purpose: This class describes a Customer
+*/
+public class Customer 
+{
+   private String firstName;
+   private String lastName;
+   
+    public Customer() {
+
+    firstName = "";
+    lastName = "";
+       }
+
+     public Customer(String firstName, String lastName) {
+
+    this.firstName = firstName;
+    this.lastName = lastName;
+    
+    }
+
+
+    public String getFirstName() {
+            return firstName;
+}
+
+    public String getLastName() {
+            return lastName;
+}
+
+
+public void setFirstName(String firstName) {
+    this.firstName = firstName;
+}
+
+public void setLastName(String lastName) {
+    this.lastName = lastName;
+}
+
+
+    @Override
+    public String toString() {
+
+        String display;
+
+        display = ("\n" +"Full Name: " + firstName + " " + lastName + "\n");
+
+            return display;
+}
+
+int compareTo(Customer get) {
+    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+}
+
+
+
+
+ }
+    
+ 
